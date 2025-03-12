@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Digital - RSVP</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="six-page">
+    <div class="canvas">
+        
+        <!-- Form RSVP -->
+        <div class="rsvp-box">
+            <h2>Konfirmasi Kehadiran</h2>
+        
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" placeholder="Masukkan Nama Anda">
+        
+            <label>Kehadiran</label>
+            <div class="rsvp-options">
+                <input type="radio" id="hadir" name="kehadiran" value="Hadir">
+                <label for="hadir">Hadir</label>
+        
+                <input type="radio" id="tidak-hadir" name="kehadiran" value="Tidak Hadir">
+                <label for="tidak-hadir">Tidak Hadir</label>
+            </div>
+        
+            <label for="komentar">Komentar</label>
+            <textarea id="komentar" placeholder="Tambahkan komentar"></textarea>
+        
+            <button type="button" onclick="kirimRSVP()">Kirim</button>
+        </div>
+
+        <!-- Hasil RSVP dengan slider -->
+        <div class="hasil-wrapper">
+            <div class="hasil-container">
+                <button class="nav-btn left" onclick="geserHasil(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="hasil-card" id="hasil-rsvp">
+                    <p>Belum ada RSVP</p>
+                </div>
+                <button class="nav-btn right" onclick="geserHasil(1)"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+        
+        <!-- Kotak Navigasi -->
+        <div class="nav-box">
+            <a href="undangan.html" class="nav-btn"><i class="fa-solid fa-book"></i></a>
+            <a href="undangan2.html" class="nav-btn"><i class="fa-solid fa-heart"></i></a>
+            <a href="undangan3.html" class="nav-btn"><i class="fa-solid fa-location-dot"></i></a>
+            <a href="undangan4.html" class="nav-btn"><i class="fa-solid fa-image"></i></a>
+            <a href="undangan5.html" class="nav-btn"><i class="fa-solid fa-gift"></i></a>
+            <a href="undangan6.html" class="nav-btn"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <iframe src="audio.html" allow="autoplay" style="display: none;"></iframe>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script>
+        let hasilRSVP = [];
+        let indexTampil = 0;
+
+        function kirimRSVP() {
+            var nama = document.getElementById("nama").value;
+            var komentar = document.getElementById("komentar").value;
+            var kehadiran = document.querySelector('input[name="kehadiran"]:checked');
+
+            if (nama.trim() === "" || !kehadiran) {
+                alert("Silakan isi nama dan pilih kehadiran!");
+                return;
+            }
+
+            let hasilText = `<div class="hasil-item">
+                                <p><strong>${nama}</strong> (${kehadiran.value})</p>
+                                <p>${komentar}</p>
+                             </div>`;
+
+            hasilRSVP.push(hasilText);
+            indexTampil = hasilRSVP.length - 1;
+            tampilkanHasil();
+
+            document.getElementById("nama").value = "";
+            document.getElementById("komentar").value = "";
+            kehadiran.checked = false;
+        }
+
+        function tampilkanHasil() {
+            let container = document.getElementById("hasil-rsvp");
+            container.innerHTML = hasilRSVP[indexTampil] || "<p>Belum ada RSVP</p>";
+        }
+
+        function geserHasil(arah) {
+            if (hasilRSVP.length === 0) return;
+            indexTampil = (indexTampil + arah + hasilRSVP.length) % hasilRSVP.length;
+            tampilkanHasil();
+        }
+
+        // Tampilkan pertama kali
+        tampilkanHasil();
+    </script>
+</body>
+</html>
