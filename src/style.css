@@ -1,0 +1,590 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.canvas {
+    width: 1080px;
+    height: 1920px;
+    background: url('images/cover.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#open-invitation {
+    background-color: #264c74;
+    color: white;
+    font-size: 40px; /* Perbesar teks */
+    padding: 15px 30px; /* Perbesar area tombol */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 870px; /* Geser ke bawah */
+    width: 400px; /* Atur lebar tombol */
+    height: 100px; /* Atur tinggi tombol */
+    text-align: center;
+}
+
+#open-invitation:hover {
+    background-color: #9acafd;
+}
+
+/* Tambahan khusus untuk undangan.html */
+.undangan-page .canvas {
+    background: url('images/halaman1.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    justify-content: flex-end; /* Rata bawah */
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding-bottom: 60px; /* Jarak dari bawah */
+}
+.nav-box {
+    width: 450px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: -90px;
+}
+
+/* Tombol Navigasi */
+.nav-btn {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    color: black;
+    font-size: 30px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Saat hover, ikon jadi putih & tombol jadi hitam */
+.nav-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.undangan-page .content {
+    background: rgba(255, 255, 255, 0.8); /* Efek transparan */
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+}
+
+.undangan-page h1 {
+    font-size: 50px;
+    color: #264c74;
+}
+
+.undangan-page p {
+    font-size: 24px;
+    color: #333;
+}
+/* Animasi fade-in untuk undangan.html */
+.undangan-page {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.second-page .canvas {
+    background: url('images/halaman2.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.second-page .content {
+    background: rgba(255, 255, 255, 0.8); /* Efek transparan */
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+}
+
+.second-page h1 {
+    font-size: 50px;
+    color: #264c74;
+}
+
+.second-page p {
+    font-size: 24px;
+    color: #333;
+}
+/* Animasi fade-in untuk undangan.html */
+.second-page {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.third-page .canvas {
+    background: url('images/halaman3.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.third-page .content {
+    background: rgba(255, 255, 255, 0.8); /* Efek transparan */
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+}
+
+.third-page h1 {
+    font-size: 50px;
+    color: #264c74;
+}
+
+.third-page p {
+    font-size: 24px;
+    color: #333;
+}
+/* Animasi fade-in untuk undangan.html */
+.third-page {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+.google-map-btn {
+    display: block;
+    width: 300px; /* Perbesar tombol */
+    padding: 15px 30px; /* Perbesar area klik */
+    background-color: #264c74;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 1380px auto 50px 388px; /* Geser ke kanan */
+    border-radius: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.google-map-btn:hover {
+    background-color: #9acafd;
+}
+
+keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.four-page .canvas {
+    background: url('images/halaman4.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.four-page .content {
+    background: rgba(255, 255, 255, 0.8); /* Efek transparan */
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+}
+
+.four-page h1 {
+    font-size: 50px;
+    color: #264c74;
+}
+
+.four-page p {
+    font-size: 24px;
+    color: #333;
+}
+/* Animasi fade-in untuk undangan.html */
+.four-page {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.five-page .canvas {
+    background: url('images/halaman5.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.five-page .content {
+    background: rgba(255, 255, 255, 0.8); /* Efek transparan */
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+}
+
+.five-page h1 {
+    font-size: 50px;
+    color: #264c74;
+}
+
+.five-page p {
+    font-size: 24px;
+    color: #333;
+}
+/* Animasi fade-in untuk undangan.html */
+.five-page {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.six-page .canvas {
+    background: url('images/halaman6.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.six-page .content {
+    background: rgba(255, 255, 255, 0.8); /* Efek transparan */
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+}
+
+.six-page h1 {
+    font-size: 50px;
+    color: #264c74;
+}
+
+.six-page p {
+    font-size: 24px;
+    color: #333;
+}
+.six-page {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Judul RSVP */
+.rsvp-box h2 {
+    color: #264c74;
+    font-size: 40px; /* Diperbesar */
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* Label */
+.rsvp-box label {
+    display: block;
+    font-size: 24px; /* Perbesar */
+    margin-top: 25px;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+
+/* Input Nama & Komentar */
+.rsvp-box input[type="text"], 
+.rsvp-box textarea {
+    width: 100%;
+    padding: 18px; /* Lebih besar */
+    margin-top: 8px;
+    border-radius: 12px;
+    border: 2px solid #aaa;
+    font-size: 20px; /* Perbesar font */
+    background-color: rgba(255, 255, 255, 0.7);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.rsvp-box input:focus, 
+.rsvp-box textarea:focus {
+    border-color: #264c74;
+    box-shadow: 0 0 12px rgba(38, 76, 116, 0.5);
+}
+
+/* Hadir & Tidak Hadir Rata Tengah */
+.rsvp-options {
+    display: flex;
+    justify-content: center;
+    gap: 60px; /* Jarak lebih besar */
+    margin-top: 15px;
+}
+
+/* Styling tombol Hadir & Tidak Hadir */
+.rsvp-options label {
+    padding: 25px 40px; /* Perbesar ukuran */
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 26px; /* Font lebih besar */
+    font-weight: bold;
+    border: 3px solid #264c74;
+    color: #264c74;
+    transition: all 0.3s ease;
+}
+
+/* Radio button disembunyikan */
+.rsvp-options input[type="radio"] {
+    display: none;
+}
+
+/* Efek saat dipilih */
+.rsvp-options input[type="radio"]:checked + label {
+    background-color: #264c74;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Komentar */
+.rsvp-box textarea {
+    height: 150px; /* Perbesar */
+    resize: none;
+}
+
+/* Tombol Kirim Diperbesar */
+.rsvp-box button {
+    margin-top: 30px;
+    padding: 18px 40px;
+    background: linear-gradient(45deg, #264c74, #407bbf);
+    color: white;
+    font-size: 26px; /* Perbesar font */
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    width: 60%; /* Lebih besar */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.rsvp-box button:hover {
+    background: linear-gradient(45deg, #407bbf, #9acafd);
+    transform: scale(1.1);
+}
+
+.komentar-box p {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    text-align: left;
+    color: #333;
+}
+
+.komen-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.komen-header {
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.status {
+    font-size: 14px;
+    font-weight: bold;
+    color: #28a745; /* Hijau untuk hadir */
+}
+
+.status:contains("Tidak Hadir") {
+    color: #dc3545; /* Merah untuk tidak hadir */
+}
+
+.komen-text {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+    padding-left: 10px;
+    border-left: 3px solid #007bff;
+}
+/* Gaya untuk header komentar */
+.komen-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Warna status */
+.status {
+    font-size: 22px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Warna status untuk 'Tidak Hadir' */
+.status:contains("Tidak Hadir") {
+    color: #dc3545;
+}
+
+/* Gaya untuk teks komentar */
+.komen-text {
+    font-size: 40px;
+    color: #555;
+    margin-top: 10px;
+    padding-left: 16px;
+    border-left: 6px solid #007bff;
+}
+
+.sound-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #264c74;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.sound-btn:hover {
+    background-color: #407bbf;
+    transform: scale(1.1);
+}
+.hasil-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hasil-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hasil-card {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    min-height: 60px;
+}
+
+.hasil-item {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #9db4ed;
+    padding: 8px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+.page {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+.page.active {
+    display: block;
+}
